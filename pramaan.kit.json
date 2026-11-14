@@ -1,0 +1,235 @@
+{
+  "id": "projects",
+  "version": "0.1.0",
+  "title": "Team projects and tasks",
+  "summary": "Plan projects, assign tasks, move work on a board and collaborate with project guests.",
+  "category": "business-operations",
+  "stack": {
+    "contract": "1",
+    "template": "data",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "node": "24.18.0",
+    "packageManager": "pnpm@11.15.1"
+  },
+  "licence": "MIT",
+  "provenance": {
+    "mode": "derived",
+    "starter": "Pramaan-Dev/product-loop@370419379645405019af029fa08a75680ad75c8b",
+    "derivedFrom": ["Pramaan-Dev/product-loop@370419379645405019af029fa08a75680ad75c8b"],
+    "upstreamNotices": ["NOTICE.md"],
+    "writtenBy": "person"
+  },
+  "measured": {
+    "on": "2026-11-14",
+    "by": "person",
+    "draft": {
+      "peakMiB": 1210,
+      "limitMiB": 2560,
+      "firstAnswerSeconds": 5
+    },
+    "verifier": {
+      "peakMiB": 1369,
+      "limitMiB": 2048,
+      "seconds": 24
+    },
+    "browser": {
+      "peakMiB": 135,
+      "limitMiB": 1024
+    }
+  },
+  "entryPoints": [
+    {
+      "route": "/",
+      "file": "app/page.tsx",
+      "audience": "visitor",
+      "summary": "Sign in to your invited account."
+    },
+    {
+      "route": "/projects",
+      "file": "app/projects/page.tsx",
+      "audience": "member",
+      "summary": "Create and open team projects."
+    },
+    {
+      "route": "/my-tasks",
+      "file": "app/my-tasks/page.tsx",
+      "audience": "member",
+      "summary": "See your assigned tasks across projects."
+    },
+    {
+      "route": "/team",
+      "file": "app/team/page.tsx",
+      "audience": "owner",
+      "summary": "Invite members and project guests."
+    },
+    {
+      "route": "/statuses",
+      "file": "app/statuses/page.tsx",
+      "audience": "owner",
+      "summary": "Edit the workspace task statuses."
+    },
+    {
+      "route": "/invite",
+      "file": "app/invite/page.tsx",
+      "audience": "visitor",
+      "summary": "Accept a one-time invite and choose a password."
+    },
+    {
+      "route": "/owner",
+      "file": "app/owner/page.tsx",
+      "audience": "owner",
+      "summary": "Set owner sign-in details."
+    },
+    {
+      "route": "/password-reset",
+      "file": "app/password-reset/page.tsx",
+      "audience": "visitor",
+      "summary": "Request a password reset."
+    },
+    {
+      "route": "/reset-password",
+      "file": "app/reset-password/page.tsx",
+      "audience": "visitor",
+      "summary": "Choose a password using a reset link."
+    }
+  ],
+  "roles": {
+    "owner": {
+      "source": "owner-pass",
+      "summary": "Manages all projects, team invites and statuses."
+    },
+    "member": {
+      "source": "added-by-owner",
+      "summary": "Works across team projects and tasks."
+    },
+    "guest": {
+      "source": "added-by-owner",
+      "summary": "Sees and comments on only the invited project."
+    },
+    "visitor": {
+      "source": "anonymous",
+      "summary": "Can sign in or accept an invite; cannot see work."
+    }
+  },
+  "journeys": [
+    {
+      "id": "create-project",
+      "role": "owner",
+      "summary": "Create a team project.",
+      "status": "ships-working",
+      "checklist": "journeys/create-project.json"
+    },
+    {
+      "id": "manage-task",
+      "role": "owner",
+      "summary": "Create a task and move it on the board.",
+      "status": "ships-working",
+      "checklist": "journeys/manage-task.json"
+    },
+    {
+      "id": "invite-member",
+      "role": "owner",
+      "summary": "Prepare a one-time member invite.",
+      "status": "ships-working",
+      "checklist": "journeys/invite-member.json"
+    },
+    {
+      "id": "invite-guest",
+      "role": "owner",
+      "summary": "Invite a guest to one project.",
+      "status": "ships-working",
+      "checklist": "journeys/invite-guest.json"
+    },
+    {
+      "id": "edit-statuses",
+      "role": "owner",
+      "summary": "Add, rename, reorder and remove unused task statuses.",
+      "status": "ships-working",
+      "checklist": "journeys/edit-statuses.json"
+    },
+    {
+      "id": "owner-settings",
+      "role": "owner",
+      "summary": "Open owner settings through the owner pass.",
+      "status": "ships-working",
+      "checklist": "journeys/owner-settings.json"
+    },
+    {
+      "id": "signed-out",
+      "role": "visitor",
+      "summary": "A signed-out visitor cannot see projects.",
+      "status": "ships-working",
+      "checklist": "journeys/signed-out.json"
+    },
+    {
+      "id": "my-tasks",
+      "role": "owner",
+      "summary": "Open the personal tasks view.",
+      "status": "ships-working",
+      "checklist": "journeys/my-tasks.json"
+    },
+    {
+      "id": "member-joins",
+      "role": "member",
+      "summary": "Accept an emailed member invite and sign in.",
+      "status": "needs-capability",
+      "capability": "email"
+    },
+    {
+      "id": "guest-joins",
+      "role": "guest",
+      "summary": "Accept an emailed guest invite and comment on the invited project.",
+      "status": "needs-capability",
+      "capability": "email"
+    },
+    {
+      "id": "assignment-email",
+      "role": "member",
+      "summary": "Receive a task assignment notice.",
+      "status": "needs-capability",
+      "capability": "email"
+    },
+    {
+      "id": "task-attachment",
+      "role": "member",
+      "summary": "Upload and download a private task attachment.",
+      "status": "needs-capability",
+      "capability": "file_storage"
+    },
+    {
+      "id": "task-csv",
+      "role": "owner",
+      "summary": "Import and export tasks with CSV.",
+      "status": "not-testable",
+      "reason": "The checklist cannot read downloads or switch identities. The headless walk and database tests verify this."
+    },
+    {
+      "id": "guest-isolation",
+      "role": "owner",
+      "summary": "Guests get a server refusal for any other project.",
+      "status": "not-testable",
+      "reason": "The checklist cannot read downloads or switch identities. The headless walk and database tests verify this."
+    }
+  ],
+  "capabilities": [
+    "accounts",
+    "server_data",
+    "roles",
+    "email",
+    "file_storage",
+    "file_input",
+    "download"
+  ],
+  "notIncluded": [
+    "Email delivery needs the platform email module and a configured sender, off by default. With email off the owner gets a one-time link to pass on.",
+    "Task attachments need the platform files module, off by default.",
+    "Going live with data needs the platform live database, off by default.",
+    "Member and guest password reset requires a previously verified email and the email module; no signed-in password changes for these roles.",
+    "No public sign-up. Guests join one project and may view and comment only.",
+    "No live updates: reload to see others\u2019 changes.",
+    "CSV imports are limited to 100 tasks and 12 KB per file. Assignment notices are grouped by person.",
+    "No project or task deletion, member removal or multiple workspaces per sign-in in this version."
+  ],
+  "protectedPaths": ["lib/accounts.ts", "lib/projects/access.ts", "lib/projects/invites.ts"]
+}

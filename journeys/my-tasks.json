@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "my-tasks",
+      "label": "Open the personal tasks view.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/my-tasks"
+        },
+        {
+          "expectText": "My tasks"
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

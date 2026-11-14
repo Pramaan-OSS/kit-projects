@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "manage-task",
+      "label": "Create a task and move it on the board.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/projects"
+        },
+        {
+          "fill": "Project name",
+          "value": "Board checks"
+        },
+        {
+          "click": "Create project"
+        },
+        {
+          "click": "Board checks"
+        },
+        {
+          "click": "Add task"
+        },
+        {
+          "fill": "Task title",
+          "value": "Draft brief"
+        },
+        {
+          "click": "Save task"
+        },
+        {
+          "expectText": "Draft brief"
+        },
+        {
+          "select": "Move Draft brief",
+          "option": "Doing"
+        },
+        {
+          "expectText": "Saved."
+        },
+        {
+          "click": "List"
+        },
+        {
+          "select": "Status filter",
+          "option": "Doing"
+        },
+        {
+          "expectText": "Draft brief"
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

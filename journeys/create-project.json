@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": "create-project",
+      "label": "Create a team project.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/projects"
+        },
+        {
+          "fill": "Project name",
+          "value": "Launch plan"
+        },
+        {
+          "click": "Create project"
+        },
+        {
+          "expectText": "Project created."
+        },
+        {
+          "expectText": "Launch plan"
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

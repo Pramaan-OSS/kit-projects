@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "edit-statuses",
+      "label": "Add, rename, reorder and remove unused task statuses.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/statuses"
+        },
+        {
+          "fill": "New status",
+          "value": "Review"
+        },
+        {
+          "click": "Add status"
+        },
+        {
+          "expectText": "Review"
+        },
+        {
+          "fill": "Name of Review",
+          "value": "Ready"
+        },
+        {
+          "click": "Rename Review"
+        },
+        {
+          "expectText": "Ready"
+        },
+        {
+          "click": "Move Ready up"
+        },
+        {
+          "click": "Remove Ready"
+        },
+        {
+          "expectText": "Status removed."
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

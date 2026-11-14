@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "invite-guest",
+      "label": "Invite a guest to one project.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/projects"
+        },
+        {
+          "fill": "Project name",
+          "value": "Guest review"
+        },
+        {
+          "click": "Create project"
+        },
+        {
+          "expectText": "Project created."
+        },
+        {
+          "goto": "/team"
+        },
+        {
+          "fill": "Invite email",
+          "value": "guest-check@example.test"
+        },
+        {
+          "select": "Invite role",
+          "option": "Guest"
+        },
+        {
+          "select": "Guest project",
+          "option": "Guest review"
+        },
+        {
+          "click": "Invite person"
+        },
+        {
+          "expectText": "Invite ready for guest-check@example.test."
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

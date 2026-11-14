@@ -1,0 +1,144 @@
+{
+  "kit": "projects",
+  "version": "0.1.0",
+  "digest": "sha256:71e04922f754c4fead732b941c730a2822f7e9344cb8e7d4050b26993ce99714",
+  "contract": "1",
+  "green": false,
+  "ranAt": "2026-11-14T03:41:09.906Z",
+  "run": null,
+  "gates": [
+    {
+      "id": "contract",
+      "ok": true,
+      "evidence": "111 files, 5 migrations, 14 journeys"
+    },
+    {
+      "id": "licence",
+      "ok": true,
+      "evidence": "MIT; derived, written by person"
+    },
+    {
+      "id": "secrets",
+      "ok": true,
+      "evidence": "Scanned 112 source files for credential-shaped material."
+    },
+    {
+      "id": "packages",
+      "ok": true,
+      "evidence": "0 packages beyond the starter's, every one under an allowed licence"
+    },
+    {
+      "id": "install",
+      "ok": true,
+      "evidence": "Frozen starter lockfile installed with scripts and pnpmfile disabled using Node 24.18.0 and pnpm 11.15.1."
+    },
+    {
+      "id": "check",
+      "ok": true,
+      "evidence": "Clean archive lint and typecheck pass; production build passes. Clean container check/build: 1369 MiB, 8 s; recent install 16 s. Two inherited lint warnings."
+    },
+    {
+      "id": "tests",
+      "ok": true,
+      "evidence": "28 tests passed, zero skipped. Test process peak 503 MiB summed RSS; exact-toolchain container peak 290 MiB."
+    },
+    {
+      "id": "migrations",
+      "ok": true,
+      "evidence": "Five migrations applied to fresh Postgres 16, including a non-superuser database owner, with 192 MiB and 0.5 CPU."
+    },
+    {
+      "id": "client-secrets",
+      "ok": true,
+      "evidence": "Build with platform stand-ins: 109 served files scanned, no stand-ins found."
+    },
+    {
+      "id": "draft",
+      "ok": true,
+      "evidence": "Container peak 1210 MiB, first answer 5 s; all entry points and dynamic project routes checked."
+    },
+    {
+      "id": "browser",
+      "ok": true,
+      "evidence": "Running app container peak 135 MiB; headless walk peak 184 MiB summed process RSS. Desktop/mobile images inspected."
+    },
+    {
+      "id": "owner-pass",
+      "ok": true,
+      "evidence": "Valid pass and starter core action work; reused, expired, forged and foreign passes refused."
+    },
+    {
+      "id": "authorization",
+      "ok": true,
+      "evidence": "Member and guest sign-in, guest project/comment/file/task/CSV isolation and owner-only actions verified."
+    },
+    {
+      "id": "journey:create-project",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:manage-task",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:invite-member",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:invite-guest",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:edit-statuses",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:owner-settings",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:signed-out",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "journey:my-tasks",
+      "ok": true,
+      "evidence": "Passed in the local headless browser with modules off."
+    },
+    {
+      "id": "tree",
+      "ok": true,
+      "evidence": "Final source committed; clean archive checked; protected starter files compared byte for byte."
+    },
+    {
+      "id": "canonical-ci",
+      "ok": false,
+      "evidence": "The product-loop hosted CI execution and its run URL are pending. This is local evidence, not a green canonical CI record. No push or publication was performed."
+    }
+  ],
+  "measured": {
+    "on": "2026-11-14",
+    "by": "person",
+    "draft": {
+      "peakMiB": 1210,
+      "limitMiB": 2560,
+      "firstAnswerSeconds": 5
+    },
+    "verifier": {
+      "peakMiB": 1369,
+      "limitMiB": 2048,
+      "seconds": 24
+    },
+    "browser": {
+      "peakMiB": 135,
+      "limitMiB": 1024
+    }
+  }
+}

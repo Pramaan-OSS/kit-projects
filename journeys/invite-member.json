@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "invite-member",
+      "label": "Prepare a one-time member invite.",
+      "steps": [
+        {
+          "enterAs": "owner"
+        },
+        {
+          "goto": "/team"
+        },
+        {
+          "fill": "Invite email",
+          "value": "member-check@example.test"
+        },
+        {
+          "click": "Invite person"
+        },
+        {
+          "expectText": "Invite ready for member-check@example.test."
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

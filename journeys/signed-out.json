@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "id": "signed-out",
+      "label": "A signed-out visitor cannot see projects.",
+      "steps": [
+        {
+          "goto": "/projects"
+        },
+        {
+          "expectText": "Sign in"
+        }
+      ]
+    }
+  ],
+  "names": {}
+}

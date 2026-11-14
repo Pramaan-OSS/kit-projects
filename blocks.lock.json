@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "blocks": [
+    {
+      "id": "pipeline",
+      "version": "0.1.0",
+      "source": "Pramaan-OSS/blocks",
+      "sourceCommit": "4577cabca086a430563c196b6cd86cc919f873c0",
+      "sourcePath": "registry/pipeline",
+      "licence": "MIT",
+      "sourceHashes": {
+        "registry/pipeline/components/pramaan/pipeline/pipeline-panel.tsx": "bcc046857d4ff257a27fc5e5c7c71cb37ca39270efb777584c790dc3faea77af",
+        "registry/pipeline/lib/pramaan/pipeline.ts": "0427aeed7b34c43e68859f3caf4fb6d3d136fe3f2d1fb6130eb09bc03ca8685a"
+      }
+    },
+    {
+      "id": "theme",
+      "version": "0.1.0",
+      "source": "Pramaan-OSS/blocks",
+      "sourceCommit": "4577cabca086a430563c196b6cd86cc919f873c0",
+      "sourcePath": "registry/theme",
+      "licence": "MIT",
+      "sourceHashes": {
+        "registry/theme/lib/pramaan/fonts.ts": "de90da679c962d19170f0dcd78f69558b435dd8a8aeba8b3bc176ecc754ff410"
+      }
+    },
+    {
+      "id": "password-reset",
+      "version": "0.1.0",
+      "source": "Pramaan-OSS/blocks",
+      "sourceCommit": "4577cabca086a430563c196b6cd86cc919f873c0",
+      "sourcePath": "registry/password-reset",
+      "licence": "MIT",
+      "sourceHashes": {
+        "registry/password-reset/components/pramaan/password-reset/password-panel.tsx": "21c00ff55174a2b604fe46073e643ced6d8351b4f9acd140d1abaf49adb0bd08"
+      }
+    }
+  ],
+  "adaptations": {
+    "pipeline": "Board/list view, drag and keyboard moves adapted for project task rows, editable workspace statuses and locked server ordering. Registry snapshot has no version; 0.1.0 labels this source snapshot.",
+    "theme": "Bundled fonts and shared starter theme; no remote font requests.",
+    "password-reset": "Starter reset-request and reset actions replace block storage and sender; shared reset forms use the starter email module."
+  }
+}
